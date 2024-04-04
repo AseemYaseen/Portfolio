@@ -326,10 +326,6 @@ video {
   font-size: 22px;
   color: rgb(255, 255, 255);
 }
-.contactInfo{
-
-}
-
 
 @media screen and (max-width: 768px) {
   .AsemLogo {
@@ -340,10 +336,6 @@ video {
     flex-direction: column;
     align-items: center;
   }
-
-  /* .HeaderName{
-    margin-top: 40px;
-  } */
 
   .textSizeDown{
     margin-top: 30px;
@@ -374,7 +366,7 @@ video {
   font-size: 15px;
 }
 video{
-  height: 80px !important;
+  height: 120px !important;
 }
   /* Adjust other styles as needed */
 }
