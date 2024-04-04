@@ -15,29 +15,52 @@
     href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Madimi+One&display=swap"
     rel="stylesheet" />
 
-  <!-- Custom CSS (You can create your own stylesheet) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
   <!-- Navbar section -->
   <nav class="navFlex">
-    <img src="images/logo-asem.png" alt="AsemLogo" class="AsemLogo" />
+    <img src="images/logo-asem.png" alt="AsemLogo" class="AsemLogo" /> <!-- Removed mx-auto -->
     <ul class="theNavItems">
-      <li><a class="active2" href="#whyMe">Why me ?</a></li>
-      <li><a class="active1" href="#badHabits">bad habits</a></li>
-      <li><a class="active3" href="#projects">Projects</a></li>
-      <li><a class="active4" href="#contact">Contact</a></li>
+        <li><a class="active1" href="#whyMe">Why me ?</a></li>
+        <li><a class="active2" href="#badHabits">bad habits</a></li>
+        <li><a class="active3" href="#projects">Projects</a></li>
+        <li><a class="active4" href="#contact">Contact</a></li>
     </ul>
+    <div class="d-flex"></div>
+</nav>
 
-    <div class="d-flex">
+<div id="small-screen-nav">
+    <nav class="navbar navbar-primary bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color:white;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <div class="collapse madimi-one-regular" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+            <ul>
+                <li><a class="active1" href="#whyMe">Why me ?</a></li>
+                <li><a class="active2" href="#badHabits">bad habits</a></li>
+                <li><a class="active3" href="#projects">Projects</a></li>
+                <li><a class="active4" href="#contact">Contact me</a></li>
+            </ul>
+        </div>
     </div>
-  </nav>
+</div>
 
   <!-- First Section-->
   <header>
     <div class="WelcomePageFlex">
-      <div>
+      <div class="textSizeDown">
         <span class="HeaderName madimi-one-regular" id="changingText"></span>
       </div>
       <img data-aos="fade-up" data-aos-duration="3000" src="./images/AseemTe.png" class="AsemImg" alt="" />
@@ -47,7 +70,7 @@
 <!-- About Section -->
 <section id="whyMe" style="margin-top: 1%;">
   <div class="container">
-    <div class="col-lg-12 text-center" data-aos="fade-down" data-aos-duration="2000">
+    <div class="col-lg-12 text-center whyMe" data-aos="fade-down" data-aos-duration="2000">
       <h2 class="section-title roboto-slab" id="typedHeader" style="margin-bottom: 10%; font-size: 40px;">Why me ?</h2>
     </div>
     <div class="row">
@@ -146,23 +169,27 @@
 </section>
 
 <!-- Projects Section -->
-<section id="projects" style="height: auto;">
+<section id="projects" style="height: auto; margin-bottom: 4%;">
   <div class="container">
     <div class="col-lg-12 text-center">
       <h2 class="section-title roboto-slab" id="typedHeader" style="margin-bottom: 4%; font-size: 40px;" data-aos="fade-down" data-aos-duration="2000">Projects</h2>
     </div>
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h3 class="roboto-slab" data-aos="fade-down" style="margin-bottom: 4%;" data-aos-duration="2000">Take a look at some of the projects I've created </h3>
-        <ul class="projects-list roboto-slab" style="margin-bottom: 4%;">
-          <li data-aos="fade-left" data-aos-duration="2000">1- <span class="projects-span">Travelers-Jo</span></li>
-          <li data-aos="fade-left" data-aos-duration="2000">2- <span class="projects-span">Kol-Alsouq</span></li>
-          <li data-aos="fade-left" data-aos-duration="2000">3- <span class="projects-span">Fields Corner</span>: Stadium reservations website</li>
-          <li data-aos="fade-left" data-aos-duration="2000">4- <span class="projects-span">Coach Tick</span>: School attendance and students manager website</li>
-          <li data-aos="fade-left" data-aos-duration="2000">5- <span class="projects-span">Bright Eyes</span>: Eyeglasses online store</li>
-          <li data-aos="fade-left" data-aos-duration="2000">6- <span class="projects-span">Misk Soft - ERP system</span>: worked on an ERP system, building some parts of its front and backend</li>
-        </ul>
-        <h3 style="margin-bottom: 6%;" class="roboto-slab">And there is much more! You can have a look at some of my projects down here:</h3>
+        <h3 class="roboto-slab" data-aos="fade-down" style="margin-bottom: 4%;" data-aos-duration="2000">Some projects I worked on : </h3>
+        <div class="projects-list roboto-slab">
+          <p data-aos="fade-left" data-aos-duration="2000">1- <span class="projects-span">Kol-Alsouq</span></p>
+          <p data-aos="fade-left" data-aos-duration="2000">2- <span class="projects-span">Travelers-Jo</span></p>
+          <p data-aos="fade-left" data-aos-duration="2000">3- <span class="projects-span">Fields Corners</span> : Eyeglasses online store</p>
+          <p data-aos="fade-left" data-aos-duration="2000">4- <span class="projects-span">Bright Eye</span> : Stadium reservations website</p>
+          <p data-aos="fade-left" data-aos-duration="2000">5- <span class="projects-span">Coach Tick </span>: School attendance and students manager website</p>
+          <p data-aos="fade-left" data-aos-duration="2000">6- <span class="projects-span">Misk Soft - ERP system</span>: worked on an ERP system, building some parts of its front and backend</p>
+      </div>
+        <h3 style="margin-bottom: 6%;" class="roboto-slab">And there is much more! , You can have a look at some of my projects down here:</h3>
+        <video autoplay loop muted style="width: 100%; height: 300px; object-fit: cover;">
+          <source src="images/Arrows1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
     <div class="row">
@@ -241,30 +268,120 @@
   </div>
 </section>
     <!-- Contact Section -->
-    <section id="contact">
-      <div class="container">
-        <div class="contact-content">
-          <h2 class="section-title">How to Reach Me</h2>
-          <div class="contact-info">
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <span>Email:</span>
-              <a href="mailto:asem.techmail@gmail.com">asem.techmail@gmail.com</a>
+    <div id="contact" class="container my-5">
+      <!-- Footer -->
+      <footer
+              class="text-center text-lg-start text-white"
+              style="background-color: #45526e"
+              >
+        <div class="container p-4 pb-0">
+          <section>
+            <div class="row">
+              <div class="col-md-3 col-lg-3 col-xl-4 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">
+                  Asem Yaseen
+                </h6>
+                <p class="footerMessage">
+                  I know that together we will build something that we can both be proud of,
+                  so do not hesitate to contact me to make your idea a reality.
+                </p>
+                <div class="contactInfoDiv">
+                  <p class="contactInfo"><a href="mailto:asem.techmail@gmail.com">Email : asem.techmail@gmail.com</a></p>
+                  <p class="contactInfo"><a href="tel:+962778079491">Phone : + 962 7780 79491</a></p>
+                </div>
+              </div>
+              <!-- Grid column -->
+    
+              <hr class="w-100 clearfix d-md-none" />
+    
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Let's Talk !</h6>
+                <img src="images/developer.gif" alt="AsemLogo" class="" style="width: 270px; margin-bottom: 20px;" />
+
+              </div>
+              <hr class="w-100 clearfix d-md-none" />
+              <hr class="w-100 clearfix d-md-none" />
+    
+              <!-- Grid column -->
+              <!-- <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+
+                <p><i class="fas fa-print mr-3"></i></p>
+              </div> -->
+              <!-- Grid column -->
             </div>
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <span>Phone:</span>
-              <a href="tel:+1234567890">+962 778079491</a>
+            <!--Grid row-->
+          </section>
+          <!-- Section: Links -->
+    
+          <hr class="my-3">
+    
+          <!-- Section: Copyright -->
+          <section class="p-3 pt-0">
+            <div class="row d-flex align-items-center">
+              <!-- Grid column -->
+              <div class="col-md-7 col-lg-8 text-center text-md-start">
+                <!-- Copyright -->
+                <div class="p-3">
+                  © 2024 Copyright:
+                  <a class="text-white" href=""
+                     >AsemYassen</a
+                    >
+                </div>
+                <!-- Copyright -->
+              </div>
+              <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                <!-- Facebook -->
+                <a
+                   class="btn btn-outline-light btn-floating m-1"
+                   class="text-white"
+                   role="button"
+                   ><i class="fab fa-facebook-f"></i
+                  ></a>
+    
+                <!-- Twitter -->
+                <a
+                   class="btn btn-outline-light btn-floating m-1"
+                   class="text-white"
+                   role="button"
+                   ><i class="fab fa-twitter"></i
+                  ></a>
+    
+                <!-- Google -->
+                <a
+                   class="btn btn-outline-light btn-floating m-1"
+                   class="text-white"
+                   role="button"
+                   ><i class="fab fa-google"></i
+                  ></a>
+    
+                <!-- Instagram -->
+                <a
+                   class="btn btn-outline-light btn-floating m-1"
+                   class="text-white"
+                   role="button"
+                   ><i class="fab fa-instagram"></i
+                  ></a>
+              </div>
+              <!-- Grid column -->
             </div>
-          </div>
+          </section>
+          <!-- Section: Copyright -->
         </div>
-      </div>
-    </section>
+        <!-- Grid container -->
+      </footer>
+      <!-- Footer -->
+    </div>
+    
 
   <!-- Bootstrap JS and dependencies -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="index.js"></script>

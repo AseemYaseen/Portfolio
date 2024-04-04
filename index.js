@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
         "I'm a Web <span class='blue-text'>Developer</span>",
         "<span class='textSizeDown'>Let's Build something <span class='blue-text'>GREAT</span> together ! </span>",
     ];
+        function updateText(index) {
+        changingTextElement.innerHTML = textArray[index];
+    }
+
+    let currentIndex = 0;
+    updateText(currentIndex);
 
     const typed = new Typed(changingTextElement, {
         strings: textArray,
