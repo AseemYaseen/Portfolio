@@ -92,11 +92,11 @@ nav ul li a:hover,
 }
 .lang-ar {
   text-align: right;
-  font-size: 90px; 
+  font-size: 90px;
   font-weight: 900;
 }
 
-.textSizeUp span{
+.textSizeUp span {
   font-size: 90px;
 }
 .marhey {
@@ -291,7 +291,6 @@ nav ul li a:hover,
 video {
   z-index: 10;
   object-fit: cover;
-
 }
 
 #small-screen-nav {
@@ -323,51 +322,50 @@ video {
   text-decoration: underline;
 }
 
-.text-uppercase{
+.text-uppercase {
   font-size: 28px;
 }
-.footerMessage{
+.footerMessage {
   font-size: 21px;
   font-weight: 600;
 }
-.contactInfoDiv{
+.contactInfoDiv {
   padding: 15px;
   border: 4px double #e1db14;
-
 }
-.contactInfoDiv a{
+.contactInfoDiv a {
   font-weight: 700;
   font-size: 22px;
   color: rgb(255, 255, 255);
 }
 
-.switchLabel{
+.switchLabel {
   width: 50px;
-  height: 25px; 
+  height: 25px;
   position: relative;
   display: block;
   background-color: #ebebee;
-  border-radius: 25px; 
-  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  border-radius: 25px;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
+    inset 0px -5px 15px rgba(255, 255, 255, 0.4);
   cursor: pointer;
-  transition: 0.3s ;
+  transition: 0.3s;
   text-align: center;
   line-height: 21.5px; /* Same as the height of the pseudo-element */
 }
 
-
 /* Sun and moon */
 .switchLabel:after {
   content: "";
-  width: 21px; 
-  height: 21px; 
+  width: 21px;
+  height: 21px;
   position: absolute;
-  top: 2px; 
+  top: 2px;
   left: 2px;
   background: linear-gradient(180deg, #ffcc89, #d8860b);
-  border-radius: 50%; 
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); 
-  transition: 0.3s ;
+  border-radius: 50%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
   font-size: 20px;
 }
 
@@ -377,25 +375,25 @@ video {
   visibility: hidden;
 }
 
-.switchInput:checked +.switchLabel {
+.switchInput:checked + .switchLabel {
   background: #242424;
 }
 
 .switchInput:checked + .switchLabel:after {
   transform: translateX(25px);
   background: linear-gradient(180deg, #777, #3a3a3a);
-  padding-left: 2px
+  padding-left: 2px;
 }
 
-.switchLabel:active:after{
+.switchLabel:active:after {
   width: 34px;
 }
 .switchInput:checked + .switchLabel:after {
   /* Moon Icon */
-  content: "\f186"; 
-  font-family: "Font Awesome 6 Free"; 
-  font-weight: 600; 
-  color: #ffd700; 
+  content: "\f186";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  color: #ffd700;
 }
 
 .switchInput:not(:checked) + .switchLabel:after {
@@ -410,7 +408,7 @@ video {
   background-color: rgb(29, 29, 29);
   color: rgb(255, 255, 255);
 }
-.dark-mode nav ul li a, 
+.dark-mode nav ul li a,
 .dark-mode .contact-item a {
   color: rgb(255, 255, 255);
 }
@@ -422,17 +420,17 @@ video {
 .dark-mode .navFlex {
   background: rgb(20, 20, 20);
 }
-.dark-mode .WelcomePageFlex{
-background: #3a3a3a;
+.dark-mode .WelcomePageFlex {
+  background: #3a3a3a;
 }
-.dark-mode .HeaderName{
-color: #ebebee;
+.dark-mode .HeaderName {
+  color: #ebebee;
 }
-.dark-mode #typedHeader{
+.dark-mode #typedHeader {
   color: #ebebee;
 }
 
-.navFlex .dropdown, 
+.navFlex .dropdown,
 .navFlex .switchLabel {
   margin: 0 5px;
 }
@@ -447,13 +445,13 @@ color: #ebebee;
   .AsemLogo {
     display: block;
     margin: 0 auto; /* Centering the logo */
-}
+  }
   .WelcomePageFlex {
     flex-direction: column;
     align-items: center;
   }
 
-  .textSizeDown{
+  .textSizeDown {
     margin-top: 30px;
   }
   .textSizeDown span {
@@ -471,17 +469,17 @@ color: #ebebee;
     display: block;
   }
 
-  #badHabits{
-    margin-top:48%;
+  #badHabits {
+    margin-top: 10%;
   }
-.projects-list{
-  margin-bottom: 40px;
-}
+  .projects-list {
+    margin-bottom: 40px;
+  }
 
-.projects-list p {
-  font-size: 15px;
-}
-video{
-  height: 120px !important;
-}
+  .projects-list p {
+    font-size: 15px;
+  }
+  video {
+    height: 120px !important;
+  }
 }
