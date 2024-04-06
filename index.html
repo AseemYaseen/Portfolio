@@ -11,6 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  
+<link href="https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Madimi+One&display=swap"
     rel="stylesheet" />
@@ -20,6 +22,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
   <link rel="stylesheet" href="index.css" />
 </head>
@@ -27,15 +30,29 @@
 <body>
   <!-- Navbar section -->
   <nav class="navFlex">
-    <img src="images/logo-asem.png" alt="AsemLogo" class="AsemLogo" /> <!-- Removed mx-auto -->
+    <img src="images/logo-asem.png" alt="AsemLogo" class="AsemLogo" />
     <ul class="theNavItems">
-        <li><a class="active1" href="#whyMe">Why me ?</a></li>
-        <li><a class="active2" href="#badHabits">bad habits</a></li>
-        <li><a class="active3" href="#projects">Projects</a></li>
-        <li><a class="active4" href="#contact">Contact</a></li>
+      <li><a class="active1" href="#whyMe" data-lang-key="whyMe">Why me?</a></li>
+      <li><a class="active2" href="#badHabits" data-lang-key="badHabits">Bad habits</a></li>
+      <li><a class="active3" href="#projects" data-lang-key="projects">Projects</a></li>
+      <li><a class="active4" href="#contact" data-lang-key="contact">Contact</a></li>
     </ul>
-    <div class="d-flex"></div>
-</nav>
+    <div class="d-flex">
+      <!-- Language dropdown -->
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-globe"></i>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="languageDropdown">
+          <a class="dropdown-item" href="javascript:void(0);" onclick="changeLanguage('en')">English</a>
+          <a class="dropdown-item" href="javascript:void(0);" onclick="changeLanguage('ar')">العربية</a>
+        </div>
+      </div>
+      <!-- Dark/Light mode toggle button -->
+      <input class="switchInput" type="checkbox" id="darkmode-toggle"/>
+      <label class="switchLabel" for="darkmode-toggle"></label>
+    </div>
+  </nav>
 
 <div id="small-screen-nav">
     <nav class="navbar navbar-primary bg-dark">
@@ -48,10 +65,10 @@
     <div class="collapse madimi-one-regular" id="navbarToggleExternalContent">
         <div class="bg-dark p-4">
             <ul>
-                <li><a class="active1" href="#whyMe">Why me ?</a></li>
-                <li><a class="active2" href="#badHabits">bad habits</a></li>
-                <li><a class="active3" href="#projects">Projects</a></li>
-                <li><a class="active4" href="#contact">Contact me</a></li>
+                <li><a class="active1" data-lang-key="whyMe" href="#whyMe">Why me ?</a></li>
+                <li><a class="active2" data-lang-key="badHabits" href="#badHabits">bad habits</a></li>
+                <li><a class="active3" data-lang-key="projects" href="#projects">Projects</a></li>
+                <li><a class="active4" data-lang-key="contact" href="#contact">Contact me</a></li>
             </ul>
         </div>
     </div>
@@ -71,7 +88,7 @@
 <section id="whyMe" style="margin-top: 1%;">
   <div class="container">
     <div class="col-lg-12 text-center whyMe" data-aos="fade-down" data-aos-duration="2000">
-      <h2 class="section-title roboto-slab" id="typedHeader" style="margin-bottom: 10%; font-size: 40px;">Why me ?</h2>
+      <h2 class="section-title roboto-slab" id="typedHeader" style="margin-bottom: 10%; font-size: 40px;" data-lang-key="whyMe">Why me ?</h2>
     </div>
     <div class="row">
       <div class="col-lg-6" data-aos="fade-right" data-aos-duration="2000">
@@ -80,30 +97,30 @@
       <div class="col-lg-6">
         <div class="about-content roboto-slab">
           <div class="row">
-            <div class="col-md-12 small-why-me-header" data-aos="fade-left" data-aos-duration="2000">
+            <div class="col-md-12 small-why-me-header" data-lang-key="Easy" data-aos="fade-left" data-aos-duration="2000">
               Easy to deal with !
             </div>
-            <div class="col-md-12 small-paragraph">
+            <div class="col-md-12 small-paragraph" data-lang-key="Simple">
               <p>Simple communication, clear plans, and efficient discussions.</p>
             </div>
-            <div class="col-md-12 small-why-me-header" data-aos="fade-down" data-aos-duration="2000">
+            <div class="col-md-12 small-why-me-header" data-lang-key="Works" data-aos="fade-down" data-aos-duration="2000">
               Works with dedication !
             </div>
-            <div class="col-md-12 small-paragraph">
+            <div class="col-md-12 small-paragraph" data-lang-key="Dedicated">
               <p>Dedicated to your project's success, treating it with the same passion as my own.</p>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-12 small-why-me-header" data-aos="fade-right" data-aos-duration="2000">
+            <div class="col-md-12 small-why-me-header" data-aos="fade-right" data-lang-key="Values" data-aos-duration="2000">
               Values your time !
             </div>
-            <div class="col-md-12 small-paragraph">
+            <div class="col-md-12 small-paragraph"  data-lang-key="William">
               <p>”Better three hours too soon than a minute too late.” — William Shakespeare</p>
             </div>
-            <div class="col-md-12 small-why-me-header" data-aos="fade-up" data-aos-duration="2000">
+            <div class="col-md-12 small-why-me-header" data-lang-key="yourWay" data-aos="fade-up" data-aos-duration="2000">
               Builds it your way !
             </div>
-            <div class="col-md-12 small-paragraph">
+            <div class="col-md-12 small-paragraph" data-lang-key="Crafting">
               <p>Crafting solutions tailored to your preferences and vision.</p>
             </div>
           </div>
@@ -117,7 +134,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center" data-aos="fade-down" data-aos-duration="2000">
-        <h2 class="section-title roboto-slab" id="typedHeader" style="margin-bottom: 10%; font-size: 40px;">Bad Habits</h2>
+        <h2 class="section-title roboto-slab" id="typedHeader" style="margin-bottom: 10%; font-size: 40px;" data-lang-key="badHabits">Bad Habits</h2>
       </div>
     </div>
     <div class="row">
@@ -125,16 +142,16 @@
       <div class="col-lg-5" data-aos="fade-right" data-aos-duration="2000">
         <div class="about-content roboto-slab">
           <div class="row">
-            <div class="col-md-12 small-why-me-header">
+            <div class="col-md-12 small-why-me-header" data-lang-key="Exceeding">
               Exceeding Expectations:
             </div>
-            <div class="col-md-12 small-paragraph">
+            <div class="col-md-12 small-paragraph" data-lang-key="dontLike">
               <p>I may want your project to succeed more than you do, and some people don't like that!</p>
             </div>
-            <div class="col-md-12 small-why-me-header">
+            <div class="col-md-12 small-why-me-header" data-lang-key="Unsolicited">
               Offering Unsolicited Advice:
             </div>
-            <div class="col-md-12 small-paragraph">
+            <div class="col-md-12 small-paragraph" data-lang-key="advice">
               <p>I may give you advice you did not ask for, such as how to save money or suggestions to make your project better !</p>            
             </div>
           </div>
@@ -143,16 +160,16 @@
       <div class="col-lg-5" data-aos="fade-left" data-aos-duration="2000">
         <div class="about-content roboto-slab">
           <div class="row">
-            <div class="col-md-12 small-why-me-header">
+            <div class="col-md-12 small-why-me-header" data-lang-key="Space">
               Space consumer:
             </div>
-            <div class="col-md-12 small-paragraph">
+            <div class="col-md-12 small-paragraph" data-lang-key="alwaysWork">
               <p>You may always work with me, and this means that I will occupy additional space between your contacts!</p>
             </div>
-            <div class="col-md-12 small-why-me-header">
+            <div class="col-md-12 small-why-me-header" data-lang-key="Different">
               Different from society :
             </div>
-            <div class="col-md-12 small-paragraph">
+            <div class="col-md-12 small-paragraph" data-lang-key="additional">
               <p>I may do additional free things, while this is unacceptable because society is accustomed to paying for everything !</p>
             </div>
           </div>
@@ -172,20 +189,20 @@
 <section id="projects" style="height: auto; margin-bottom: 4%;">
   <div class="container">
     <div class="col-lg-12 text-center">
-      <h2 class="section-title roboto-slab" id="typedHeader" style="margin-bottom: 4%; font-size: 40px;" data-aos="fade-down" data-aos-duration="2000">Projects</h2>
+      <h2 class="section-title roboto-slab" id="typedHeader" style="margin-bottom: 4%; font-size: 40px;" data-aos="fade-down" data-aos-duration="2000" data-lang-key="projects">Projects</h2>
     </div>
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h3 class="roboto-slab" data-aos="fade-down" style="margin-bottom: 4%;" data-aos-duration="2000">Some projects I worked on : </h3>
+        <h3 class="roboto-slab" data-aos="fade-down" style="margin-bottom: 4%;" data-aos-duration="2000" data-lang-key="someProjects">Some projects I worked on : </h3>
         <div class="projects-list roboto-slab">
-          <p data-aos="fade-left" data-aos-duration="2000">1- <span class="projects-span">Kol-Alsouq</span></p>
+          <p data-aos="fade-left" data-aos-duration="2000">1- <span class="projects-span" >Kol-Alsouq</span></p>
           <p data-aos="fade-left" data-aos-duration="2000">2- <span class="projects-span">Travelers-Jo</span></p>
-          <p data-aos="fade-left" data-aos-duration="2000">3- <span class="projects-span">Fields Corners</span> : Eyeglasses online store</p>
-          <p data-aos="fade-left" data-aos-duration="2000">4- <span class="projects-span">Bright Eye</span> : Stadium reservations website</p>
-          <p data-aos="fade-left" data-aos-duration="2000">5- <span class="projects-span">Coach Tick </span>: School attendance and students manager website</p>
-          <p data-aos="fade-left" data-aos-duration="2000">6- <span class="projects-span">Misk Soft - ERP system</span>: worked on an ERP system, building some parts of its front and backend</p>
+          <p data-aos="fade-left" data-lang-key="BrightEyes" data-aos-duration="2000" data-contains-html>3- <span class="projects-span">Bright Eye</span> : Eyeglasses online store</p>
+          <p data-aos="fade-left" data-lang-key="FieldsCorners" data-aos-duration="2000" data-contains-html>4- <span class="projects-span">Fields Corners</span> : Stadium reservations website</p>
+          <p data-aos="fade-left" data-lang-key="CoachTick" data-aos-duration="2000" data-contains-html>5- <span class="projects-span">Coach Tick</span>: School attendance and students manager website</p>
+          <p data-aos="fade-left" data-lang-key="MiskSoftERP" data-aos-duration="2000" data-contains-html>6- <span class="projects-span">Misk Soft - ERP system</span>: worked on an ERP system, building some parts of its front and backend</p>
       </div>
-        <h3 style="margin-bottom: 6%;" class="roboto-slab muchMore">And there is much more! , You can have a look at some of my projects down here:</h3>
+        <h3 style="margin-bottom: 6%;" class="roboto-slab muchMore" data-lang-key="haveLook">And there is much more! , You can have a look at some of my projects down here:</h3>
         <video class="theArrows" autoplay loop muted style="width: 100%; height: 300px; object-fit: cover;">
           <source src="images/Arrows1.mp4" type="video/mp4">
           Your browser does not support the video tag.
@@ -198,7 +215,7 @@
         <div class="project">
           <img src="images/master-pics/main.png" class="project-img" alt="Project 1" data-toggle="modal" data-target="#project1Modal">
           <h3>Travelers Jo</h3>
-          <p class="project-description">It is a website where you choose your budget and the number of days you will spend in a specific city, and it will suggest to you the best places for rent, food, and entertainment according to that budget.</p>
+          <p class="project-description" data-lang-key="TravelersDes">It is a website where you choose your budget and the number of days you will spend in a specific city, and it will suggest to you the best places for rent, food, and entertainment according to that budget.</p>
         </div>
       </div>
       <div class="col-lg-4 mb-4">
@@ -206,7 +223,7 @@
         <div class="project">
           <img src="images/fields-corner-pics/Screenshot (108).png" class="project-img" alt="Project 2" data-toggle="modal" data-target="#project2Modal">
           <h3 class="project-title">Fields Corner</h3>
-          <p class="project-description">It is a site through which reservations are made for the various available fields, such as football fields, basketball fields, golf courses, or even swimming pools.</p>
+          <p class="project-description" data-lang-key="FieldsDes">It is a site through which reservations are made for the various available fields, such as football fields, basketball fields, golf courses, or even swimming pools.</p>
         </div>
       </div>
       <div class="col-lg-4 mb-4">
@@ -214,7 +231,7 @@
         <div class="project">
           <img src="images/comingsoon.png" class="project-img" alt="Project 3" data-toggle="modal" data-target="#project3Modal">
           <h3 class="project-title">Kol-Alsouq</h3>
-          <p class="project-description">It is a large website that allows you to collect all online stores in one place, and I am currently working on it.</p>
+          <p class="project-description" data-lang-key="KolDes">It is a large website that allows you to collect all online stores in one place, and I am currently working on it.</p>
         </div>
       </div>
 
@@ -281,7 +298,7 @@
                 <h6 class="text-uppercase mb-4 font-weight-bold">
                   Asem Yaseen
                 </h6>
-                <p class="footerMessage">
+                <p class="footerMessage" data-lang-key="contactMessage">
                   I know that together we will build something that we can both be proud of,
                   so do not hesitate to contact me to make your idea a reality.
                 </p>
@@ -296,7 +313,7 @@
     
               <!-- Grid column -->
               <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                <h6 class="text-uppercase mb-4 font-weight-bold">Let's Talk !</h6>
+                <h6 class="text-uppercase mb-4 font-weight-bold" data-lang-key="letsTalk">Let's Talk !</h6>
                 <img src="images/developer3.gif" alt="AsemLogo" class="" style="width: 270px; margin-bottom: 20px;" />
 
               </div>
@@ -323,7 +340,7 @@
               <!-- Grid column -->
               <div class="col-md-7 col-lg-8 text-center text-md-start">
                 <!-- Copyright -->
-                <div class="p-3">
+                <div class="p-3" data-lang-key="copyWrite">
                   © 2024 Copyright:
                   <a class="text-white" href=""
                      >AsemYassen</a
