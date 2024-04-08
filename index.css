@@ -444,7 +444,7 @@ video {
 @media screen and (max-width: 768px) {
   .AsemLogo {
     display: block;
-    margin: 0 auto; /* Centering the logo */
+    margin: 0 auto;
   }
   .WelcomePageFlex {
     flex-direction: column;
